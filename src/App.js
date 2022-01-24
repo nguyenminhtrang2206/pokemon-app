@@ -1,11 +1,26 @@
 import React from 'react';
-import Header from './Header';
+import Layout from './Layout';
+
+import {
+    BrowserRouter,
+    Routes,
+    Route
+  } from "react-router-dom";
+import Home from './Home';
 import PokemonsList from './PokemonsList';
+
+
 const App = () => {
     return (
         <div>
-            <Header />
-            <PokemonsList />
+            <BrowserRouter>
+            <Routes>
+                <Route path="/" element= {<Layout/>}>
+                    <Route index element={<Home />} />
+                    <Route path="/pokemons" element={<PokemonsList />} />
+                </Route>
+            </Routes>
+            </BrowserRouter>
         </div>
     );
 };
