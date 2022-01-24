@@ -8,22 +8,20 @@ import {
     Route
   } from "react-router-dom";
 import Home from './Home';
-import PokemonsList from './PokemonsList';
+import PokeList from './PokeList';
 
 
 const App = () => {
     return (
-        <div>
-            <BrowserRouter>
-            <Routes>
-                <Route path="/" element= {<Layout/>}>
-                    <Route index element={<Home />} />
-                    <Route path="/pokemons" element={<PokemonsList />} />
-                </Route>
-            </Routes>
-            </BrowserRouter>
-        </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="pokelist" element={<PokeList />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     );
-};
-
-export default App;
+  };
+  
+  export default App;
