@@ -8,7 +8,7 @@ import PokeCard from "../components/PokeCard";
 import Loader from "../components/Loader";
 import { Button } from "react-bootstrap";
 
-const PokeList = () => {
+const PokeList = ({favHandler}) => {
   const [pokemons, setPokemons] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [nextPokemons, setNextPokemons] = useState(
@@ -56,6 +56,7 @@ const PokeList = () => {
                 name={pokemon.name}
                 image={pokemon.sprites.other.dream_world.front_default}
                 pokemonName={pokemon.name}
+                favClick={() => favHandler(pokemon)}
               />
             ))}
         </Row>
