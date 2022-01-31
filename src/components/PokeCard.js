@@ -5,15 +5,15 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { Heart, HeartFill} from 'react-bootstrap-icons';
 
-const PokeCard = ({ name, image, pokemonName, type, fav, favHandler }) => {
+const PokeCard = ({ name, image, pokemonName, type, fav, favClick }) => {
   return (
     <Card className={type} bg="dark" text="light" key={name}>
       <Card.Header className="d-flex justify-content-between">
       {name}
       {fav ? (
-        <HeartFill  onClick= {favHandler} size="30" color="red"/>
+        <HeartFill  onClick= {favClick} size="30" color="red"/>
       ) : (
-        <Heart onClick= {favHandler} size="30" color="white"/>
+        <Heart onClick= {favClick} size="30" color="white"/>
       )
       }
       </Card.Header>

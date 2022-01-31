@@ -15,17 +15,18 @@ import FavList from './components/FavList';
 const App = () => {
   const [favourites, setFavourites] = useState([]);
   const favHandler = (pokemon) => {
-    let item = favourites.some(item => item.ide == pokemon.id);
+    let item = favourites.some(item => item.id == pokemon.id);
 
     if (!item) {
       setFavourites(prevState => [...prevState, pokemon]);
     } else {
       const newArray = [...favourites];
-      newArray.aplice(newArray.findIndex((item) => item.id === pokemon.id),
+      newArray.splice(newArray.findIndex((item) => item.id === pokemon.id),
       1
       );
       setFavourites(newArray);
     }
+    console.log("wow");
   };
 
     return (
@@ -33,7 +34,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="pokelist" element={<PokeList favHandler={favHandler} />} />
+            <Route path="pokelist" element={<PokeList favHandler={favHandler} favourites={favourites} />} />
             <Route path="/:pokemonName" element={<PokeSingle />} />
             <Route path="favourites" element= {<FavList favHandler={favHandler} favourites={favourites}/>} />
           </Route>
