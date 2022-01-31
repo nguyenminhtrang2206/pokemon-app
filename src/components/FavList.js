@@ -2,6 +2,7 @@ import React from 'react';
 import Container  from 'react-bootstrap/Container';
 import Row  from 'react-bootstrap/Row';
 import PokeCard from './PokeCard';
+import Button from 'react-bootstrap/Button';
 
 const FavList = ({favHandler, favourites}) => {
     return (
@@ -26,6 +27,7 @@ const FavList = ({favHandler, favourites}) => {
 
                 </Row>
             </Container>
+            <Button>Clear all favourites</Button>
         </div>
     );
 };
