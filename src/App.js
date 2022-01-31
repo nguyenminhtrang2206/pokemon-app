@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
-import Layout from './Layout';
+import Layout from './components/Layout';
 
 import {
     BrowserRouter,
     Routes,
     Route
   } from "react-router-dom";
-import Home from './Home';
-import PokeList from './PokeList';
+import Home from './pages/Home';
+import PokeList from './pages/PokeList';
 
 
 const App = () => {

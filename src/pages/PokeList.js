@@ -4,8 +4,8 @@ import axios from "axios";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 
-import PokeCard from "./PokeCard";
-import Loader from "./Loader";
+import PokeCard from "../components/PokeCard";
+import Loader from "../components/Loader";
 import { Button } from "react-bootstrap";
 
 const PokeList = () => {
