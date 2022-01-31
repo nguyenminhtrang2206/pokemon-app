@@ -55,6 +55,7 @@ const PokeList = () => {
                 key={pokemon.name}
                 name={pokemon.name}
                 image={pokemon.sprites.other.dream_world.front_default}
+                pokemonName={pokemon.name}
               />
             ))}
         </Row>

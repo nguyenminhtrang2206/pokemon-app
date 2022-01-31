@@ -9,7 +9,7 @@ import {
   } from "react-router-dom";
 import Home from './pages/Home';
 import PokeList from './pages/PokeList';
-
+import PokeSingle from './pages/PokeSingle';
 
 const App = () => {
     return (
@@ -18,6 +18,7 @@ const App = () => {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="pokelist" element={<PokeList />} />
+            <Route path="/:pokemonName" element={<PokeSingle />} />
           </Route>
         </Routes>
       </BrowserRouter>
