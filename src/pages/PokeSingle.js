@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Loader from '../components/Loader';
 import { Button }from "react-bootstrap";
+
 
 const PokeSingle = () => {
     let {pokemonName} = useParams();
@@ -24,6 +26,7 @@ const PokeSingle = () => {
            {!isLoading && (
                <div>
                 <h2>{pokemon.name}</h2>
+                
                 <img src={pokemon.sprites.other.home.front_default} />
                 <p>Base experience: {pokemon.base_experience}</p>
                 <p>Height: {pokemon.height}0 cm</p>
